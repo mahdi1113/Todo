@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Vazir'; /* نام فونت */
+    src: url('./vazir-font-v16.1.0/Vazir.woff') format('woff2'), /* منبع فونت */
+         url('./vazir-font-v16.1.0/Vazir-Light.woff') format('woff'); /* منبع فونت */
+  }
+  /* C:\xampp\htdocs\API\resources\js\vazir-font-v16.1.0\Vazir-Medium.woff */
+
+
+body {
+  font-family: "Vazir", sans-serif !important;
+  font-size: 20px;
+}
+
+.my-element {
+    font-family: 'Vazir', sans-serif !important;
+  }
+
+  /* اندازه کوچک */
+.swal2-popup {
+    width: 600px !important;
+    font-size: 12px !important;
+  }
+
+  .font-size-error{
+    font-size: 12px;
+  }
+
