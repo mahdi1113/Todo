@@ -18,6 +18,7 @@ use App\Http\Controllers\TestController;
 // use App\Http\Controllers\PostController;
 use App\Http\Controllers\TodoController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\post\PostController;
 use App\Http\Controllers\auth\LogoutController;
 use App\Http\Controllers\auth\RegisterController;
 
@@ -37,7 +38,7 @@ use App\Http\Controllers\auth\RegisterController;
 // });
 
 
-Route::get('/posts',[PostController::class,'index']);
+// Route::get('/posts',[PostController::class,'index']);
 
 Route::get('/todos',[TodoController::class, 'index'])->middleware(['auth:api']);
 Route::delete('/todos/delete/{id}',[TodoController::class, 'destroy']);
@@ -52,4 +53,12 @@ Route::get('logout',[LogoutController::class,'logout'])->middleware(['auth:api']
 // Route::
 // Route::post('test',[TestController::class, 't'])->middleware(['auth:api']);
 
+
+
+// POST
+Route::get('/posts',[PostController::class, 'index']);
+Route::post('/posts/store',[PostController::class, 'sotre']);
+Route::delete('/posts/delete/{id}',[PostController::class, 'destroy']);
+Route::get('post/show/{id}',[PostController::class, 'show']);
+Route::put('post/update/{id}',[PostController::class, 'update']);
 
